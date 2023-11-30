@@ -5,7 +5,7 @@ id = "django-fritzconnection"
 name = "Django FritzConnection"
 description.en = "Web based FritzBox management using Python/Django."
 
-version = "0.3.0~ynh3"
+version = "0.3.0~ynh4"
 
 maintainers = ["Jens Diemer"]
 
@@ -22,7 +22,7 @@ code = "https://github.com/YunoHost-Apps/djfritz_ynh"
 
 [integration]
 # https://yunohost.org/en/packaging_manifest#integration-section
-yunohost = ">=11"
+yunohost = ">=11.2"
 architectures = "all"
 multi_instance = true
 ldap = true
@@ -74,6 +74,20 @@ ram.runtime = "50M" # **estimate** minimum ram requirement. e.g. 50M, 400M, 1G, 
     type = "select"
     choices = ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
     default = "WARNING"
+
+    [main.config.fritz_username] # __FRITZ_USERNAME__
+    ask.en = "FRITZ USERNAME"
+    type = "string"
+    help = "Connection user name for your FritzBox"
+    default = ""
+    optional = true
+
+    [main.config.fritz_password] # __FRITZ_PASSWORD__
+    ask.en = "FRITZ PASSWORD"
+    type = "string"
+    help = "Connection user password for your FritzBox"
+    default = ""
+    optional = true
 
 
 [resources]

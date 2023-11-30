@@ -30,6 +30,15 @@ if [ -z "$default_from_email" ]; then
 	ynh_app_setting_set --app=$app --key=default_from_email --value="$default_from_email"
 fi
 
+if [ -z "${fritz_username:-}" ]; then
+    fritz_username=""
+	ynh_app_setting_set --app=$app --key=fritz_username --value="$fritz_username"
+fi
+if [ -z "${fritz_password:-}" ]; then
+    fritz_password=""
+	ynh_app_setting_set --app=$app --key=fritz_password --value="$fritz_password"
+fi
+
 #=================================================
 # STANDARD UPGRADE STEPS
 #=================================================
@@ -78,6 +87,7 @@ cd "$data_dir" || exit
 
 # Just for debugging:
 ./manage.py diffsettings
+./venv/bin/pip freeze
 
 ./manage.py migrate --no-input
 ./manage.py collectstatic --no-input
@@ -88,7 +98,6 @@ cd "$data_dir" || exit
 # Check the configuration
 # This may fail in some cases with errors, etc., but the app works and the user can fix issues later.
 ./manage.py check --deploy || true
-
 
 #=================================================
 # SETUP LOGROTATE

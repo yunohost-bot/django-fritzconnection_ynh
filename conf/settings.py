@@ -9,6 +9,7 @@
 ################################################################################
 ################################################################################
 
+import os
 from pathlib import Path as __Path
 
 from django_yunohost_integration.base_settings import *  # noqa:F401,F403
@@ -46,6 +47,11 @@ LOG_LEVEL = '__LOG_LEVEL__'
 ADMIN_EMAIL = '__ADMIN_EMAIL__'
 DEFAULT_FROM_EMAIL = '__DEFAULT_FROM_EMAIL__'
 
+# https://fritzconnection.readthedocs.io/en/latest/sources/getting_started.html#username-and-password
+FRITZ_USERNAME = '__FRITZ_USERNAME__'
+os.environ.setdefault('FRITZ_USERNAME', FRITZ_USERNAME)
+FRITZ_PASSWORD = '__FRITZ_PASSWORD__'
+os.environ.setdefault('FRITZ_PASSWORD', FRITZ_PASSWORD)
 
 # -----------------------------------------------------------------------------
 

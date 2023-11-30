@@ -40,3 +40,19 @@ services = ["__APP__"]
         choices = ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
         default = "WARNING"
         bind = "log_level:/home/yunohost.app/__APP__/settings.py"
+
+        [main.config.fritz_username]
+        ask = "FRITZ USERNAME"
+        type = "string"
+        help = "Connection user name for your FritzBox"
+        default = ""
+        optional = true
+        bind = "fritz_username:/home/yunohost.app/__APP__/settings.py"
+
+        [main.config.fritz_password]
+        ask = "FRITZ PASSWORD"
+        type = "string"
+        help = "Connection user password for your FritzBox"
+        default = ""
+        optional = true
+        bind = "fritz_password:/home/yunohost.app/__APP__/settings.py"
