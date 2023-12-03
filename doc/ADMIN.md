@@ -1,7 +1,7 @@
 ## Settings and upgrades
 
 Almost everything related to Django FritzConnection's configuration is handled in a `"../conf/settings.py"` file.
-You can edit the file `/home/yunohost.app/django_fritzconnection/local_settings.py` to enable or disable features.
+You can edit the file `/home/yunohost.app/django-fritzconnection/local_settings.py` to enable or disable features.
 
 Test sending emails, e.g.:
 
@@ -12,7 +12,7 @@ root@yunohost:~# /home/yunohost.app/djfritz/manage.py sendtestemail --admins
 
 How to debug a django YunoHost app, take a look into:
 
-* https://github.com/YunoHost-Apps/djfritz_ynh#developer-info
+* https://github.com/YunoHost-Apps/django-fritzconnection_ynh#developer-info
 
 ## local test
 
@@ -22,9 +22,9 @@ and urls made for YunoHost installation.
 
 e.g.:
 ```bash
-~$ git clone https://github.com/YunoHost-Apps/django_fritzconnection.git
+~$ git clone https://github.com/YunoHost-Apps/django-fritzconnection.git
 ~$ cd djfritz_ynh/
-~/django_fritzconnection$ ./dev-cli.py --help
+~/django-fritzconnection$ ./dev-cli.py --help
 ```
 
 

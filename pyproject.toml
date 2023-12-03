@@ -9,7 +9,7 @@ authors = [
 ]
 requires-python = ">=3.9"  # Stay with 3.9 until YunoHost used >=Debian 11 (Bullseye)
 dependencies = [
-    "django-fritzconnection>=0.3.0",  # https://github.com/jedie/django_fritzconnection
+    "django-fritzconnection>=0.3.0",  # https://github.com/jedie/django-fritzconnection
     #
     # extras "ynh" will install: gunicorn, psycopg2, django-redis and django-axes
     # see: https://github.com/YunoHost-Apps/django_yunohost_integration/blob/main/pyproject.toml
@@ -33,6 +33,7 @@ dev = [
     "autopep8",  # https://github.com/hhatto/autopep8
     "pyupgrade",  # https://github.com/asottile/pyupgrade
     "flake8",  # https://github.com/pycqa/flake8
+    "flake8-bugbear",  # https://github.com/PyCQA/flake8-bugbear
     "pyflakes",  # https://github.com/PyCQA/pyflakes
     "codespell",  # https://github.com/codespell-project/codespell
     "EditorConfig",  # https://github.com/editorconfig/editorconfig-core-py
@@ -54,8 +55,8 @@ dev = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/YunoHost-Apps/djfritz_ynh"
-Source = "https://github.com/YunoHost-Apps/djfritz_ynh"
+Documentation = "https://github.com/YunoHost-Apps/django-fritzconnection_ynh"
+Source = "https://github.com/YunoHost-Apps/django-fritzconnection_ynh"
 
 [project.scripts]
 djfritz_ynh_app = "djfritz_ynh.__main__:main"
@@ -170,10 +171,13 @@ upstream_pkg_app_name = "djfritz_project"
 upstream_pkg_project_name = "Django FritzConnection"
 upstream_url = "https://github.com/jedie/django-fritzconnection"
 ynh_app_pkg_name = "djfritz_ynh"
-ynh_app_url = "https://github.com/YunoHost-Apps/djfritz_ynh"
+ynh_app_url = "https://github.com/YunoHost-Apps/django-fritzconnection_ynh"
 bug_tracker_url = "https://github.com/jedie/django-fritzconnection/issues"
 upstream_version = "0.3.0"
 ynh_suffix_version = "ynh3"
 package_description = "Web based FritzBox management using Python/Django."
 license = "GPL-3.0-or-later"
 _template = "https://github.com/jedie/cookiecutter_templates/"
+applied_migrations = [
+    "84dc9a4", # 2023-12-02T01:03:10+01:00
+]

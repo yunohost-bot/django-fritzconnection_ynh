@@ -45,7 +45,7 @@ ARGUMENT_NOT_EXISTING_DIR = dict(
 ARGUMENT_EXISTING_FILE = dict(
     type=click.Path(exists=True, file_okay=True, dir_okay=False, readable=True, path_type=Path)
 )
-CLI_EPILOG = 'Project Homepage: https://github.com/YunoHost-Apps/djfritz_ynh'
+CLI_EPILOG = 'Project Homepage: https://github.com/YunoHost-Apps/django-fritzconnection_ynh'
 
 
 class ClickGroup(RichGroup):  # FIXME: How to set the "info_name" easier?

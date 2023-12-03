@@ -1,16 +1,3 @@
-"""
-    urls.py
-    ~~~~~~~
-
-    Look at real examples, here:
-
-     * https://github.com/YunoHost-Apps/djfritz_ynh/blob/master/conf/urls.py
-     * https://github.com/YunoHost-Apps/django-for-runners_ynh/blob/testing/conf/urls.py
-     * https://github.com/YunoHost-Apps/pyinventory_ynh/blob/testing/conf/urls.py
-
-"""
-
-
 from django.conf import settings
 from django.urls import include, path
 from django.views.generic import RedirectView
